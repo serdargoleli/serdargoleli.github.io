@@ -3,34 +3,282 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serdar Göleli Blog</title>
-    <link rel="stylesheet" href="/plugins/css/bootstrap.min.css" />
-     <style>
-       body{
-         overflow: hidden;
-       }
-       div{
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-         align-items: center;
-       }
-       img{
-          max-width: 100%;
-       }
-     </style>
+    <title>Serdar Göleli</title>
+    <link rel="stylesheet" href="plugins/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="container">
-      <h1 class="text-center"><strong> SERDAR GÖLELİ</strong></h1>
-      <h3> WEB SİTESİ TASARIM AŞAMASINDA</h2>
- 
-          <img  src="img/loading.gif" alt="Serdar GÖLELİ">
- 
-    
-    </div>
- 
-    
+    <nav class="nav-bar sticky-top">
+      <div class="container">
+        <a class="logo" href="">SG</a>
+        <div class="nav-bar-menu" >
+          <a href="#">Anasayfa</a>
+          <a href="#skils">Yetenekler</a>
+          <a href="#whatido">Ne yaptığım</a>
+          <a href="#concact">İletişim</a>
+        </div>
+        <button class="d-block d-md-none btn-mobil" id="mobil-menu">
+          <img src="img/mobil-menu.svg" alt="mobil-menu" id="mobil-menu-icon" />
+        </button>
+      </div>
+    </nav>
+    <header class="header" id="#">
+      <section class="header-box">
+        <h1 class="header-box-title text-center">
+          <strong>SERDAR GÖLELİ </strong>
+        </h1>
+        <article class="header-box-body">
+          <section>
+            <span>PROGRAMMER</span>
+            <span>CODER</span>
+            <span>DESINGER</span>
+          </section>
+        </article>
+        <a href="portfolio.html" class="btn btn-blue-garniet">Portfolyo'ya Git</a>
+      </section>
+    </header>
+    <section class="container skil" id="skils">
+      <h3 class="text-center">YETENEKLER</h3>
+      <p class="text-center mb-5">
+        Web sitesi geliştirme aşaması nda kullandığım teknolojiler
+      </p>
+      <div class="row mb-5">
+        <div class="col-12 col-md-6">
+          <div class="skil-card pt-4">
+            <h4 class="skil-card-title">WEB DESING</h4>
+            <div class="skil-card-body">
+              <div>
+                <span>Create Desing 95%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 95%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <span>UX/UI 95%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 95%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <span>Figma 95%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 95%;"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <span>Photoshop 75%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 75%;"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-2 mt-md-0">
+          <div class="skil-card pt-4">
+            <h4 class="skil-card-title">WEB DEVELOPMENT</h4>
+            <div class="skil-card-body">
+              <div>
+                <span>HTML+CSS 98%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 98%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <span>JavaScript 95%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 95%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <span>Vue&Nuxt 85%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 85%;"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <span>PHP+MySql 80%</span>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 80%;"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container what-i-do my-5" id="whatido">
+      <h3 class="text-center mt-5">NE YAPIYORUM</h3>
+      <p class="text-center mb-5">
+        Web sitenizin özellikleri ve neler yaptığım
+      </p>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="what-i-do-card">
+            <div class="img">
+              <img src="img/seo.svg" alt="seo etkisi  " />
+            </div>
+            <div class="text">
+              <h5>SEO Etkisi</h5>
+              <p>Tasarımı kodlarken siteniz için SEO çalışması</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="what-i-do-card">
+            <div class="img">
+              <img src="img/ozgun-tasarim.svg" alt="özgün tasarım " />
+            </div>
+            <div class="text">
+              <h5>Özgün Tasarım</h5>
+              <p>Web sitenizi alışılmışın dışında farklı ve özgün tasarlama</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="what-i-do-card">
+            <div class="img">
+              <img src="img/web-standarlari.svg" alt="web standarları" />
+            </div>
+            <div class="text">
+              <h5>Web Standartları</h5>
+              <p>Tüm tasarım web standartlarına uygun olarak yapılmakta</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="what-i-do-card">
+            <div class="img">
+              <img src="img/speed.svg" alt="hızlı yükleme" />
+            </div>
+            <div class="text">
+              <h5>Hızlı yükleme</h5>
+              <p>Çeşitli yöntemler ile site hızınızı maksimum’a çıkartma</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="what-i-do-card">
+            <div class="img">
+              <img src="img/clear-code.svg" alt="Temiz kodlama" />
+            </div>
+            <div class="text">
+              <h5>Temiz Kodlama</h5>
+              <p>
+                Web sitenizi sade ve web dostu şekilde olcak şekilde kodlama
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="what-i-do-card">
+            <div class="img">
+              <img src="img/multi-device.svg" alt="tüm platformlar" />
+            </div>
+            <div class="text">
+              <h5>Tüm platformlar</h5>
+              <p>Response kodlama ile tüm cihazlarda kusursuz görünüm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container concact" id="concact">
+      <h3 class="text-center">İLETİŞİM</h3>
+      <p class="text-center">Web site siparişi için iletişime geçin</p>
+
+      <div class="mail-box">
+        <img src="img/mail.svg" alt="web.serdargoleli@gmail.com" />
+
+        <a href="mailto:web.serdargoleli@gmail.com">
+          web.serdargoleli@gmail.com
+        </a>
+      </div>
+
+      <div class="social">
+        <a href="https://www.instagram.com/serdargoleli9" target="_blank">
+          <img src="img/instagram.svg" alt="serdar göleli instagram" />
+        </a>
+        <a href="https://twitter.com/serdargoleli" target="_blank">
+          <img src="img/twitter.svg" alt="serdar göleli twitter" />
+        </a>
+        <a href="https://www.behance.net/serdargoleli" target="_blank">
+          <img src="img/behance.svg" alt="serdar göleli behance" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/serdar-g%C3%B6leli-b1383315b/"
+          target="_blank"
+        >
+          <img src="img/linkedin.svg" alt="serdar göleli linkedin" />
+        </a>
+        <a href="https://dribbble.com/serdargoleli" target="_blank">
+          <img src="img/dribbble.svg" alt="serdar göleli dribbble" />
+        </a>
+        <a href="https://github.com/serdargoleli" target="_blank">
+          <img src="img/github.svg" alt="serdar göleli github" />
+        </a>
+        <a href="https://tr.pinterest.com/serdargoleli/boards/" target="_blank">
+          <img src="img/pinterest.svg" alt="serdar göleli pintereset" />
+        </a>
+      </div>
+    </footer>
+
     <script src="plugins/js/bootstrap.min.js"></script>
   </body>
 </html>
+<script>
+  var btn = document.querySelector("#mobil-menu");
+  var menuIcon = document.querySelector("#mobil-menu-icon");
+  var menuOpen = true;
+
+  btn.onclick = function () {
+    if (menuOpen == true){
+      menuIcon.setAttribute("src","img/close.svg");
+      document.querySelector(".nav-bar-menu").classList.add("menu-show");
+      menuOpen = false;
+    }
+    else{
+      menuIcon.setAttribute("src","img/mobil-menu.svg");
+      document.querySelector(".nav-bar-menu").classList.remove("menu-show");
+      menuOpen = true;
+    }
+   
+  };
+</script>

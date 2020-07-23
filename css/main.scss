@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
+$Saire-Stencil-One: "Saira Stencil One", cursive;
+$Salsa: "Salsa", cursive;
+$Rubik: "Rubik", sans-serif;
+$Russo-One: "Russo One", sans-serif;
+$Rock-Salt: "Rock Salt", cursive;
+// GENEREAL
+@mixin mq($width: "tel") {
+  @if ($width== "tel") {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+html,
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Saira Stencil One", cursive;
+}
+
+.btn-mobil {
+  border: none !important;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.btn-blue-garniet {
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0.3rem 3rem;
+  position: relative;
+  background-image: linear-gradient(to right, #66a6ff -1.93%, #89f7fe 103.61%);
+  overflow: hidden;
+  color: #fff;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: red;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.22);
+    transition: all 0.26s;
+  }
+  &:hover::after {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.menu-show {
+  top:60px !important;
+  transition: all 0.26s;
+}
+// PAGE
+.nav-bar {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  -webkit-box-shadow: -1px 2px 18px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: -1px 2px 18px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: -1px 2px 18px 0px rgba(0, 0, 0, 0.32);
+  @include mq("tel") {
+    overflow: visible;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .logo {
+      font-family: "Saira Stencil One", cursive;
+      line-height: 60px;
+      font-size: 35px;
+      &:hover {
+        color: rgba(0, 0, 0, 0.692);
+      }
+    }
+    .nav-bar-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      transition: all 0.26s;
+      @include mq("tel") {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: -500%;
+        background: rgb(255, 255, 255);
+        padding-bottom: 20px;
+        box-sizing: border-box;
+
+        a {
+          margin-bottom: 7.5px;
+          margin-top: 7.5px;
+        }
+      }
+      a {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-family: $Salsa;
+        font-size: 1.1rem;
+        &:hover {
+          color: rgba(0, 0, 0, 0.692);
+        }
+      }
+    }
+  }
+}
+.header {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: url("../img/header-img.png") fixed top center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-box {
+    padding: 1.2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &-title {
+      color: #fff;
+      margin-bottom: 0.8rem;
+      font-size: 3.5rem;
+      font-family: $Russo-One;
+      @include mq("tel"){
+        font-size: 3.2rem;
+      }
+    }
+    &-body {
+      height: 60px;
+      line-height: 60px;
+      overflow: hidden;
+      font-family: $Rock-Salt;
+      font-size: 1.8rem;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      margin-top: 0.4rem;
+      margin-bottom: 1.2rem;
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        animation: slide-up 5s infinite;
+      }
+    }
+  }
+}
+.skil {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    &-title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 98.7%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: $Russo-One;
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+
+      & > div {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 0.9rem;
+          font-family: $Rubik;
+          text-align: right;
+        }
+        .progress {
+          border-radius: 15px;
+          padding: 2px 4px;
+          box-sizing: border-box;
+          background: #fff;
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+          &-bar {
+            border-radius: 15px;
+            background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 98.7%);
+          }
+        }
+      }
+    }
+  }
+}
+.what-i-do {
+  &-card {
+    padding: 1.3rem;
+    background: linear-gradient(90deg, #6a4bbf 0%, #72c0e6 94.94%);
+    border-radius: 13px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    .img {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      box-sizing: border-box;
+
+      img {
+        width: 58px;
+        height: 58px;
+      }
+    }
+    .text {
+      padding-left: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h5 {
+        font-weight: 500;
+      }
+      h5,
+      p {
+        margin-bottom: 0;
+        color: #fff;
+      }
+    }
+  }
+}
+.concact {
+  margin-top: 5rem;
+  .mail-box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 64px;
+      height: 64px;
+    }
+    a {
+      margin-top: 10px;
+      font-family: $Rubik;
+      font-size: 1rem;
+    }
+  }
+  .social {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+  }
+}
+@keyframes slide-up {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -60px;
+  }
+  50% {
+    top: -120px;
+  }
+  75% {
+    top: -60px;
+  }
+  100% {
+    top: 0;
+  }
+}
