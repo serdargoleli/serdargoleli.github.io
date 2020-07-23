@@ -10,10 +10,16 @@ $Rubik: "Rubik", sans-serif;
 $Russo-One: "Russo One", sans-serif;
 $Rock-Salt: "Rock Salt", cursive;
 // GENEREAL
-
+@mixin mq($width: "tel") {
+  @if ($width== "tel") {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
 html,
 body {
-  height: 100%;
+  position: relative;
 }
 
 a {
@@ -27,12 +33,21 @@ h3 {
   font-family: "Saira Stencil One", cursive;
 }
 
-.btn {
-  padding: 0.3rem 3rem;
-  border-radius: 5px;
-  box-sizing: border-box;
+.btn-mobil {
+  border: none !important;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
 }
 .btn-blue-garniet {
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0.3rem 3rem;
   position: relative;
   background-image: linear-gradient(to right, #66a6ff -1.93%, #89f7fe 103.61%);
   overflow: hidden;
@@ -56,7 +71,10 @@ h3 {
     height: 100%;
   }
 }
-
+.menu-show {
+  top:60px !important;
+  transition: all 0.26s;
+}
 // PAGE
 .nav-bar {
   width: 100%;
@@ -65,6 +83,9 @@ h3 {
   -webkit-box-shadow: -1px 2px 18px 0px rgba(0, 0, 0, 0.32);
   -moz-box-shadow: -1px 2px 18px 0px rgba(0, 0, 0, 0.32);
   box-shadow: -1px 2px 18px 0px rgba(0, 0, 0, 0.32);
+  @include mq("tel") {
+    overflow: visible;
+  }
   .container {
     display: flex;
     justify-content: space-between;
@@ -82,8 +103,25 @@ h3 {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      transition: all 0.26s;
+      @include mq("tel") {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: -500%;
+        background: rgb(255, 255, 255);
+        padding-bottom: 20px;
+        box-sizing: border-box;
+
+        a {
+          margin-bottom: 7.5px;
+          margin-top: 7.5px;
+        }
+      }
       a {
-        margin: auto 8px;
+        margin-left: 8px;
+        margin-right: 8px;
         font-family: $Salsa;
         font-size: 1.1rem;
         &:hover {
@@ -95,8 +133,8 @@ h3 {
 }
 .header {
   width: 100%;
-  height: calc(100% - 60px);
-  background: url("../img/header-img.png") top center no-repeat;
+  height: calc(100vh - 60px);
+  background: url("../img/header-img.png") fixed top center no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -113,6 +151,9 @@ h3 {
       margin-bottom: 0.8rem;
       font-size: 3.5rem;
       font-family: $Russo-One;
+      @include mq("tel"){
+        font-size: 3.2rem;
+      }
     }
     &-body {
       height: 60px;
@@ -227,26 +268,24 @@ h3 {
     align-items: center;
     img {
       width: 64px;
-      height:64px;
+      height: 64px;
     }
-    a{
+    a {
       margin-top: 10px;
       font-family: $Rubik;
       font-size: 1rem;
-
     }
   }
-  .social{
+  .social {
     margin-top: 50px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
+    img {
       width: 32px;
       height: 32px;
       margin-right: 10px;
-      
     }
   }
 }

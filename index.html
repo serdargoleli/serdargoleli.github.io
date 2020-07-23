@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <nav class="nav-bar postion-sticky">
+    <nav class="nav-bar sticky-top">
       <div class="container">
         <a class="logo" href="">SG</a>
-        <div class="nav-bar-menu">
-          <a href="">Home</a>
-          <a href="#skils">Skils</a>
-          <a href="#whatido">What i do</a>
-          <a href="#concact">Concact</a>
+        <div class="nav-bar-menu" >
+          <a href="#">Anasayfa</a>
+          <a href="#skils">Yetenekler</a>
+          <a href="#whatido">Ne yaptığım</a>
+          <a href="#concact">İletişim</a>
         </div>
+        <button class="d-block d-md-none btn-mobil" id="mobil-menu">
+          <img src="img/mobil-menu.svg" alt="mobil-menu" id="mobil-menu-icon" />
+        </button>
       </div>
     </nav>
-    <header class="header">
+    <header class="header" id="#">
       <section class="header-box">
-        <h1 class="header-box-title text-center"><strong>SERDAR GÖLELİ </strong></h1>
+        <h1 class="header-box-title text-center">
+          <strong>SERDAR GÖLELİ </strong>
+        </h1>
         <article class="header-box-body">
           <section>
             <span>PROGRAMMER</span>
@@ -29,10 +34,10 @@
             <span>DESINGER</span>
           </section>
         </article>
-        <a href="" class="btn btn-blue-garniet">Look a Portfolio</a>
+        <a href="portfolio.html" class="btn btn-blue-garniet">Portfolyo'ya Git</a>
       </section>
     </header>
-    <section class="container skil">
+    <section class="container skil" id="skils">
       <h3 class="text-center">YETENEKLER</h3>
       <p class="text-center mb-5">
         Web sitesi geliştirme aşaması nda kullandığım teknolojiler
@@ -138,7 +143,7 @@
         </div>
       </div>
     </section>
-    <section class="container what-i-do my-5">
+    <section class="container what-i-do my-5" id="whatido">
       <h3 class="text-center mt-5">NE YAPIYORUM</h3>
       <p class="text-center mb-5">
         Web sitenizin özellikleri ve neler yaptığım
@@ -162,7 +167,7 @@
             </div>
             <div class="text">
               <h5>Özgün Tasarım</h5>
-              <p>Web sitnizi alışılmışın dışında farklı ve özgün tasarlama</p>
+              <p>Web sitenizi alışılmışın dışında farklı ve özgün tasarlama</p>
             </div>
           </div>
         </div>
@@ -215,7 +220,7 @@
       </div>
     </section>
 
-    <footer class="container concact">
+    <footer class="container concact" id="concact">
       <h3 class="text-center">İLETİŞİM</h3>
       <p class="text-center">Web site siparişi için iletişime geçin</p>
 
@@ -237,7 +242,10 @@
         <a href="https://www.behance.net/serdargoleli" target="_blank">
           <img src="img/behance.svg" alt="serdar göleli behance" />
         </a>
-        <a href="https://www.linkedin.com/in/serdar-g%C3%B6leli-b1383315b/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/serdar-g%C3%B6leli-b1383315b/"
+          target="_blank"
+        >
           <img src="img/linkedin.svg" alt="serdar göleli linkedin" />
         </a>
         <a href="https://dribbble.com/serdargoleli" target="_blank">
@@ -249,14 +257,28 @@
         <a href="https://tr.pinterest.com/serdargoleli/boards/" target="_blank">
           <img src="img/pinterest.svg" alt="serdar göleli pintereset" />
         </a>
-        
-        
-        
-        
-
       </div>
     </footer>
 
     <script src="plugins/js/bootstrap.min.js"></script>
   </body>
 </html>
+<script>
+  var btn = document.querySelector("#mobil-menu");
+  var menuIcon = document.querySelector("#mobil-menu-icon");
+  var menuOpen = true;
+
+  btn.onclick = function () {
+    if (menuOpen == true){
+      menuIcon.setAttribute("src","img/close.svg");
+      document.querySelector(".nav-bar-menu").classList.add("menu-show");
+      menuOpen = false;
+    }
+    else{
+      menuIcon.setAttribute("src","img/mobil-menu.svg");
+      document.querySelector(".nav-bar-menu").classList.remove("menu-show");
+      menuOpen = true;
+    }
+   
+  };
+</script>
