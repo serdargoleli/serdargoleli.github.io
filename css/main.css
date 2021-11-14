@@ -321,8 +321,9 @@ h3 {
 
 .what-i-do-card {
   padding: 1.3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#6a4bbf), color-stop(94.94%, #72c0e6));
-  background: linear-gradient(90deg, #6a4bbf 0%, #72c0e6 94.94%);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 4px #efefef;
+          box-shadow: 0 0 4px #efefef;
   border-radius: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,7 +374,7 @@ h3 {
 .what-i-do-card .text h5,
 .what-i-do-card .text p {
   margin-bottom: 0;
-  color: #fff;
+  color: #818181;
 }
 
 .concact {

@@ -238,7 +238,8 @@ h3 {
 .what-i-do {
   &-card {
     padding: 1.3rem;
-    background: linear-gradient(90deg, #6a4bbf 0%, #72c0e6 94.94%);
+    background-color: #fff;
+    box-shadow: 0 0 4px #efefef;
     border-radius: 13px;
     display: flex;
     justify-content: flex-start;
@@ -266,7 +267,7 @@ h3 {
       h5,
       p {
         margin-bottom: 0;
-        color: #fff;
+        color: #818181;
       }
     }
   }
